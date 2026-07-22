@@ -129,7 +129,7 @@
     href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20informacion"
     target="_blank" rel="noopener"
     aria-label="Chatear por WhatsApp">
-    <img src="../../global/img/img_whatsApp.png"
+    <img src="global/img/img_whatsApp.png"
       alt="Contactar a Gran&Chela Club por WhatsApp" decoding="async">
   </a>
 
