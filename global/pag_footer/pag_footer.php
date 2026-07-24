@@ -20,9 +20,9 @@ $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 
     <div class="footer-col">
       <h5></h5>
-      <a href="../../categorias/1.tipo_bares/index.php">Reservas</a>
-      <a href="../../categorias/2.planes_bares/index.php">Galeria</a>
-      <a href="../../categorias/2.planes_bares/index.php">Actividades</a>
+      <a href="../reservas/index.php">Reservas</a>
+      <a href="../galeria/index.php">Galeria</a>
+      <a href="../actividades/index.php">Actividades</a>
 
 
     </div>
