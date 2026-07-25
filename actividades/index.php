@@ -5,76 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-language" content="es-CO">
 
-  <title>Actividades y promociones</title>
+  <title>Actividades y Promociones | Gran&Chela Club</title>
 
-  <?php
-  $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
+  <!-- SEO principal -->
+  <meta name="description" content="Descubre las actividades, promociones, eventos y fiestas de Gran&Chela Club en Chapinero Central, Bogotá. Reserva cumpleaños, celebraciones, eventos empresariales y vive las mejores noches con música, cocteles y el mejor ambiente.">
 
-  $cssFile = $base . '/bar/Gran&Chela_Club/actividades/style.css';
+  <meta name="keywords" content="Gran&Chela Club, bar Chapinero, discoteca Bogotá, promociones, happy hour, eventos, fiestas, cumpleaños, reservas, rumba Bogotá, Chapinero Central">
 
-  $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
-  ?>
-
-  <!-- SEO principal para Google -->
-  <meta name="description" content="Descubre Chapinero, Bogotá con Chapitour: cafés, restaurantes, bares, cultura, alojamiento, planes locales y lugares para visitar.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <link rel="canonical" href="https://www.chapitour.co/bar/Gran&Chela_Club/index.php/">
-  <meta name="theme-color" content="#005548">
 
-  <!-- Open Graph: WhatsApp / Facebook -->
+  <link rel="canonical" href="https://granychelaclub.com/actividades/">
+
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Chapitour">
-  <meta property="og:title" content="Chapitour | Lugares para visitar en Chapinero, Bogotá">
-  <meta property="og:description" content="Explora Chapinero, Bogotá: cafés, restaurantes, bares, cultura, planes locales, alojamiento y lugares para visitar.">
-  <meta property="og:url" content="https://www.chapitour.co/">
-  <meta property="og:image" content="https://www.chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
-  <meta property="og:image:secure_url" content="https://www.chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
+  <meta property="og:site_name" content="Gran&Chela Club">
+  <meta property="og:title" content="Actividades y Promociones | Gran&Chela Club">
+  <meta property="og:description" content="Conoce nuestras promociones, eventos especiales, fiestas temáticas y reserva tu celebración en Gran&Chela Club, el punto de encuentro en Chapinero Central.">
+
+  <meta property="og:url" content="https://granychelaclub.com/actividades/">
+
+  <meta property="og:image" content="https://granychelaclub.com/img/logo.jpg">
+  <meta property="og:image:secure_url" content="https://granychelaclub.com/img/logo.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chapitour | Lugares para visitar en Chapinero, Bogotá">
-  <meta name="twitter:description" content="Descubre cafés, restaurantes, cultura, bares, alojamiento y planes locales en Chapinero, Bogotá.">
-  <meta name="twitter:image" content="https://www.chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
+  <meta name="twitter:title" content="Actividades y Promociones | Gran&Chela Club">
+  <meta name="twitter:description" content="Eventos, promociones, fiestas y reservas en Gran&Chela Club. Vive la mejor experiencia nocturna en Chapinero Central, Bogotá.">
+  <meta name="twitter:image" content="https://granychelaclub.com/img/logo.jpg">
 
   <!-- Iconos -->
   <link rel="icon" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/bar/Gran&Chela_Club/img/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="/bar/Gran&Chela_Club/img/logo.jpg">
+  <link rel="apple-touch-icon" href="/bar/Gran&Chela_Club/img/logo.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../actividades/style.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
 
-  <!-- Datos estructurados para Google -->
+  <!-- Datos estructurados -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "WebSite",
-        "@id": "https://www.chapitour.co/bar/Gran&Chela_Club/index.php#bar",
-        "name": "Chapitour",
-        "url": "https://www.chapitour.co/bar/Gran&Chela_Club/index.php",
-        "inLanguage": "es-CO",
-        "description": "Catálogo turístico y comercial de lugares para visitar en Chapinero, Bogotá."
+        "@type":"WebSite",
+        "@id":"https://granychelaclub.com/#website",
+        "url":"https://granychelaclub.com/",
+        "name":"Gran&Chela Club",
+        "description":"Bar, discoteca y lugar para eventos en Chapinero Central, Bogotá.",
+        "inLanguage":"es-CO"
       },
       {
-        "@type": "BarOrPub",
-        "@id": "https://www.chapitour.co/bar/Gran&Chela_Club/index.php#bar",
-        "name": "Chapinero, Bogotá",
-        "description": "Zona de Bogotá con cafés, restaurantes, bares, cultura, comercio local, alojamiento y planes para visitar.",
-        "url": "https://www.chapitour.co/bar/Gran&Chela_Club/index.php",
-        "image": "https://www.chapitour.co/home/img/logo1.jpeg",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chapinero",
-          "addressRegion": "Bogotá D.C.",
-          "addressCountry": "CO"
-        }
+        "@type":"BarOrPub",
+        "@id":"https://granychelaclub.com/#business",
+        "name":"Gran&Chela Club",
+        "url":"https://granychelaclub.com/",
+        "image":"https://granychelaclub.com/img/logo.jpg",
+        "description":"Gran&Chela Club es un bar y discoteca ubicado en Chapinero Central, Bogotá. Disfruta promociones, música en vivo, fiestas temáticas, cocteles, licores premium y reserva espacios para cumpleaños, celebraciones y eventos empresariales.",
+        "telephone":"+57 322 468 0419",
+        "servesCuisine":"Bebidas, Coctelería",
+        "priceRange":"$$",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Chapinero Central",
+          "addressRegion":"Bogotá D.C.",
+          "addressCountry":"CO"
+        },
+        "sameAs":[
+          "https://www.instagram.com/",
+          "https://www.facebook.com/"
+        ]
       }
     ]
   }

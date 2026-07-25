@@ -4,104 +4,132 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-language" content="es-CO">
+  <title>Gran&Chela Club | Bar, Discoteca y Eventos en Chapinero Central, Bogotá</title>
 
-  <title> Gran&Chela Club |  Discoteca  en Chapinero </title>
+  <!-- SEO principal -->
+  <meta name="description" content="Gran&Chela Club es un bar y discoteca en Chapinero Central, Bogotá. Disfruta música, DJs, cocteles, licores, promociones, fiestas temáticas y reserva espacios para cumpleaños, celebraciones y eventos privados.">
 
-  <?php
-  $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
+  <meta name="keywords" content="Gran&Chela Club, bar Chapinero, discoteca Bogotá, discoteca Chapinero, rumba Bogotá, cocteles, happy hour, eventos privados, cumpleaños, reservas, música en vivo, fiestas, Chapinero Central">
 
-  $cssFile = $base . '/bar/Gran&Chela_Club/style.css';
-
-  $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
-  ?>
-
-  <!-- SEO principal para Google -->
-  <meta name="description" content="Gran&Chela Club es un bar y discoteca LGBTIQ+ en Chapinero, Bogotá. Un lugar para bailar, tomar, disfrutar promociones por día y reservar eventos especiales.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <link rel="canonical" href="https://chapitour.co/bar/Gran&Chela_Club/">
-  <meta name="theme-color" content="#5b1380">
 
-  <!-- Open Graph: WhatsApp / Facebook -->
+  <link rel="canonical" href="https://chapitour.co/bar/Gran&Chela_Club/">
+
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Chapitour">
-  <meta property="og:title" content="Gran&Chela Club | Bar y discoteca LGBTIQ+ en Chapinero">
-  <meta property="og:description" content="Un espacio diverso para bailar, tomar, celebrar eventos y disfrutar promociones especiales según el día en Chapinero, Bogotá.">
+  <meta property="og:site_name" content="Gran&Chela Club">
+
+  <meta property="og:title" content="Gran&Chela Club | Bar, Discoteca y Eventos en Chapinero Central">
+
+  <meta property="og:description" content="Vive la mejor experiencia nocturna en Gran&Chela Club. Bar, discoteca y espacio ideal para celebrar cumpleaños, eventos privados y disfrutar promociones en Chapinero Central, Bogotá.">
+
   <meta property="og:url" content="https://chapitour.co/bar/Gran&Chela_Club/">
+
   <meta property="og:image" content="https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
   <meta property="og:image:secure_url" content="https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
-  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gran&Chela Club | Bar y discoteca LGBTIQ+ en Chapinero">
-  <meta name="twitter:description" content="Bar, discoteca y espacio LGBTIQ+ para bailar, tomar, reservar eventos y disfrutar promociones por día.">
+  <meta name="twitter:title" content="Gran&Chela Club | Bar, Discoteca y Eventos">
+
+  <meta name="twitter:description" content="Bar y discoteca en Chapinero Central. Disfruta promociones, DJs, cocteles, música, eventos privados y reserva tu celebración en Gran&Chela Club.">
+
   <meta name="twitter:image" content="https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg">
 
   <!-- Iconos -->
   <link rel="icon" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="icon" type="image/jpg" sizes="32x32" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="icon" type="image/jpg" sizes="16x16" href="/bar/Gran&Chela_Club/img/logo.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/bar/Gran&Chela_Club/img/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="/bar/Gran&Chela_Club/img/logo.jpg">
+  <link rel="apple-touch-icon" href="/bar/Gran&Chela_Club/img/logo.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
 
-  <!-- Datos estructurados para Google -->
+  <!-- Datos estructurados -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "WebSite",
-        "@id": "https://chapitour.co/bar/Gran&Chela_Club/index.php#bar",
-        "name": "Chapitour",
-        "url": "https://chapitour.co/bar/Gran&Chela_Club/index.php",
-        "inLanguage": "es-CO",
-        "description": "Guía turística y comercial de lugares para visitar en Chapinero, Bogotá."
+        "@type":"WebSite",
+        "@id":"https://chapitour.co/bar/Gran&Chela_Club/#website",
+        "url":"https://chapitour.co/bar/Gran&Chela_Club/",
+        "name":"Gran&Chela Club",
+        "description":"Bar, discoteca y lugar para eventos en Chapinero Central, Bogotá.",
+        "inLanguage":"es-CO"
       },
       {
-        "@type": "BarOrPub",
-        "@id": "https://chapitour.co/bar/Gran&Chela_Club/index.php#bar",
-        "name": "Gran&Chela Club",
-        "description": "Bar y discoteca LGBTIQ+ en Chapinero, Bogotá. Un lugar para bailar, tomar, celebrar eventos especiales y disfrutar promociones según el día.",
-        "url": "https://chapitour.co/bar/Gran&Chela_Club/index.php",
-        "image": "https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg",
-        "telephone": "+573224680419",
-        "servesCuisine": "Bar",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chapinero",
-          "addressRegion": "Bogotá D.C.",
-          "addressCountry": "CO"
+        "@type":"NightClub",
+        "@id":"https://chapitour.co/bar/Gran&Chela_Club/#business",
+        "name":"Gran&Chela Club",
+        "url":"https://chapitour.co/bar/Gran&Chela_Club/",
+        "image":"https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg",
+        "logo":"https://chapitour.co/bar/Gran&Chela_Club/img/logo.jpg",
+
+        "description":"Gran&Chela Club es un bar y discoteca ubicado en Chapinero Central, Bogotá. Disfruta DJs, música, cocteles, licores premium, promociones, happy hour, fiestas temáticas y reserva espacios para cumpleaños, despedidas, reuniones y eventos empresariales.",
+
+        "telephone":"+57 322 468 0419",
+
+        "priceRange":"$$",
+
+        "acceptsReservations":true,
+
+        "servesCuisine":"Coctelería y bebidas",
+
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Chapinero Central",
+          "addressRegion":"Bogotá D.C.",
+          "addressCountry":"CO"
         },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Chapinero, Bogotá"
-        },
-        "amenityFeature": [
+
+        "areaServed":"Bogotá D.C.",
+
+        "amenityFeature":[
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Ambiente LGBTIQ+",
-            "value": true
+            "@type":"LocationFeatureSpecification",
+            "name":"Bar",
+            "value":true
           },
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Discoteca y baile",
-            "value": true
+            "@type":"LocationFeatureSpecification",
+            "name":"Discoteca",
+            "value":true
           },
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Reserva para eventos",
-            "value": true
+            "@type":"LocationFeatureSpecification",
+            "name":"Música en vivo y DJs",
+            "value":true
           },
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Promociones por día",
-            "value": true
+            "@type":"LocationFeatureSpecification",
+            "name":"Cocteles",
+            "value":true
+          },
+          {
+            "@type":"LocationFeatureSpecification",
+            "name":"Happy Hour",
+            "value":true
+          },
+          {
+            "@type":"LocationFeatureSpecification",
+            "name":"Reservas",
+            "value":true
+          },
+          {
+            "@type":"LocationFeatureSpecification",
+            "name":"Cumpleaños",
+            "value":true
+          },
+          {
+            "@type":"LocationFeatureSpecification",
+            "name":"Eventos privados",
+            "value":true
           }
         ]
       }
