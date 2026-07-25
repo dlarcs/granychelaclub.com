@@ -26,12 +26,12 @@
   z-index: 1000;
   border-radius: 8px;
   box-sizing: border-box;
-
+  font-family: 'Poppins', sans-serif;
   backdrop-filter: blur(10px);
 }
 
 /* Logo */
-.chapitour-logo {
+.chapitour-logo h1 {
   font-size: clamp(1.8rem, 2.8vw, 3rem);
   font-weight: 800;
   line-height: 1;
