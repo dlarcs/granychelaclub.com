@@ -16,7 +16,7 @@
 
   <link rel="canonical" href="https://chapitour.co/bar/Gran&Chela_Club/">
 
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#000">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">

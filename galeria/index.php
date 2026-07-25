@@ -79,7 +79,7 @@
       },
       {
         "@type":"BarOrPub",
-        "@id":"https://granychelaclub.com/#business",
+        "@id":"https://granychelaclub.com/#bar",
         "name":"Gran&Chela Club",
         "url":"https://granychelaclub.com/",
         "image":"https://granychelaclub.com/img/general18.jpg",
