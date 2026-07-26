@@ -140,7 +140,7 @@
 </head>
 
 <body>
-
+  <?php include "home/nav/nav.php" ?>
   <?php include "home/slider/slider.php" ?>
 
   <div class="container_gran_chela_club">
