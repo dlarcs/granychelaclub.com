@@ -28,6 +28,7 @@
   box-sizing: border-box;
 
   backdrop-filter: blur(10px);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Logo */
