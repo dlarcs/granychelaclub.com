@@ -1,8 +1,8 @@
 <?php
 $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
 
-$cssFile = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.css';
-$jsFile  = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.js';
+$cssFile = $base . '/global/pag_nav/pag_nav.css';
+$jsFile  = $base . '/global/pag_nav/pag_nav.js';
 
 $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
@@ -41,7 +41,7 @@ $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
       <a href="../index.php#acerca_nosotros">Nosotros</a>
       <a href="../index.php#redes_sociales">Redes sociales</a>
       <a href="../index.php#ubicacion">Ubicación</a>
-      <a href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Bar%20Restaurant">Contactanos</a>
+      <a href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Bar%20Gran&Chela_Club">Contactanos</a>
 
 
 
