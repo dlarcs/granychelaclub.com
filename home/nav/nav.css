@@ -1,17 +1,25 @@
 /* ================================
-   CHAPITOUR MENU
+   GRAN&CHELA CLUB MENU
 ================================ */
 
 /* Header */
-.chapitour-header {
+.granchela-header {
   width: calc(100% - 2rem);
   height: 58px;
   margin: 1rem;
-  padding:  2rem 1rem;
+  padding: 2rem 1rem;
 
   background:
-   radial-gradient(circle at left center, rgba(0, 0, 0, 1), transparent 40%),
-   radial-gradient(circle at right center, rgba(0,0, 0, 1), transparent 15%);
+    radial-gradient(
+      circle at left center,
+      rgba(0, 0, 0, 1),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at right center,
+      rgba(0, 0, 0, 1),
+      transparent 15%
+    );
 
   color: #ebeaf0;
 
@@ -24,21 +32,28 @@
   left: 0;
 
   z-index: 1000;
+
   border-radius: 8px;
   box-sizing: border-box;
 
   backdrop-filter: blur(10px);
-  font-family: 'Poppins', sans-serif;
+  -webkit-backdrop-filter: blur(10px);
+
+  font-family: "Poppins", sans-serif;
 }
 
 /* Logo */
-.chapitour-logo {
+.granchela-logo {
+  display: block;
+
   font-size: clamp(1.8rem, 2.8vw, 3rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.02em;
+  text-decoration: none;
 
   color: transparent;
+
   background:
     linear-gradient(
       135deg,
@@ -54,12 +69,23 @@
   background-clip: text;
   -webkit-background-clip: text;
 
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
-  animation: chapitourTitle 12s ease-in-out infinite;
+  animation: granchelaTitle 12s ease-in-out infinite;
 }
 
-@keyframes chapitourTitle {
+.granchela-logo h1 {
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* Logo animation */
+@keyframes granchelaTitle {
   0% {
     background-position: 0% 50%;
     transform: rotate(-1deg);
@@ -76,22 +102,24 @@
   }
 }
 
-/* Right buttons */
-.chapitour-actions {
+/* Right buttons container */
+.granchela-actions {
   display: flex;
   align-items: center;
   gap: 0.7rem;
 }
 
 /* Icon buttons */
-.icon-btn {
+.granchela-icon-button {
   width: 42px;
   height: 42px;
+
   border-radius: 999px;
   border: 1px solid #000;
 
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
+
   cursor: pointer;
 
   display: grid;
@@ -108,66 +136,75 @@
     box-shadow 0.25s ease;
 }
 
-.icon-btn:hover {
+.granchela-icon-button:hover {
   transform: translateY(-2px);
+
   border-color: rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.08);
+
   box-shadow: 0 0 24px rgba(126, 65, 255, 0.35);
 }
 
 /* Search icon */
-.search-icon {
+.granchela-search-icon {
   width: 17px;
   height: 17px;
+
   border: 2px solid #fff;
   border-radius: 50%;
+
   position: relative;
 }
 
-.search-icon::after {
+.granchela-search-icon::after {
   content: "";
+
   width: 8px;
   height: 2px;
+
   background: #fff;
+
   position: absolute;
   right: -6px;
   bottom: -4px;
+
   transform: rotate(45deg);
   border-radius: 999px;
 }
 
-/* Burger icon */
-.menu-btn {
+/* Menu button */
+.granchela-menu-button {
   display: grid;
   gap: 4px;
 }
 
-.menu-btn span {
+.granchela-menu-button span {
   width: 18px;
   height: 2px;
-  background: #fff;
+
   display: block;
+  background: #fff;
 
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
 }
 
-/* Active burger */
-.menu-btn.is-active span:nth-child(1) {
+/* Active menu button */
+.granchela-menu-button.granchela-button-active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
 
-.menu-btn.is-active span:nth-child(2) {
+.granchela-menu-button.granchela-button-active span:nth-child(2) {
   opacity: 0;
 }
 
-.menu-btn.is-active span:nth-child(3) {
+.granchela-menu-button.granchela-button-active span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Dropdown menu */
-.chapitour-menu {
+.granchela-navigation {
   position: fixed;
   top: 82px;
   left: 1rem;
@@ -175,18 +212,28 @@
   width: calc(100% - 2rem);
 
   background:
-    radial-gradient(circle at top right, rgba(128, 54, 255, 0.22), transparent 35%),
-    linear-gradient(180deg, #080808, #020202);
+    radial-gradient(
+      circle at top right,
+      rgba(128, 54, 255, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #080808,
+      #020202
+    );
 
   border-radius: 8px;
   border: 1px solid rgba(156, 88, 255, 0.25);
+
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
 
   opacity: 0;
   visibility: hidden;
+
   transform: translateY(-10px);
 
-  z-index: 99;
+  z-index: 999;
 
   transition:
     opacity 0.25s ease,
@@ -194,33 +241,44 @@
     transform 0.25s ease;
 }
 
-.chapitour-menu.is-open {
+/* Open navigation */
+.granchela-navigation.granchela-menu-open {
   opacity: 1;
   visibility: visible;
+
   transform: translateY(0);
 }
 
-.menu-inner {
+/* Menu content */
+.granchela-menu-content {
   width: min(1100px, calc(100% - 2rem));
+
   margin: 0 auto;
   padding: 1.2rem 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(170px, 1fr)
+  );
+
   gap: 0.75rem;
 }
 
-.menu-inner a {
+/* Menu links */
+.granchela-menu-content a {
   color: rgba(255, 255, 255, 0.88);
+
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
 
   padding: 0.85rem 1rem;
+
   border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
 
   transition:
     transform 0.25s ease,
@@ -229,52 +287,62 @@
     color 0.25s ease;
 }
 
-.menu-inner a:hover {
+.granchela-menu-content a:hover {
   transform: translateY(-2px);
+
   color: #fff;
+
   background: rgba(126, 65, 255, 0.22);
   border-color: rgba(177, 121, 255, 0.45);
 }
 
-/* Responsive */
+/* ================================
+   RESPONSIVE
+================================ */
+
 @media (max-width: 600px) {
-  .chapitour-header {
+  .granchela-header {
     width: calc(100% - 1rem);
     height: 58px;
+
     margin: 2rem 0.5rem;
 
     justify-content: space-between;
     gap: 1rem;
   }
 
-  .chapitour-logo {
+  .granchela-logo {
     font-size: clamp(1.7rem, 8vw, 2.4rem);
   }
 
-  .chapitour-actions {
+  .granchela-actions {
     gap: 0.5rem;
   }
 
-  .icon-btn {
+  .granchela-icon-button {
     width: 40px;
     height: 40px;
+
     z-index: 100;
   }
 
-  .chapitour-menu {
+  .granchela-navigation {
     top: 70px;
     left: 0.5rem;
+
     width: calc(100% - 1rem);
   }
 
-  .menu-inner {
+  .granchela-menu-content {
     width: calc(100% - 1.4rem);
+
     grid-template-columns: 1fr;
+
     padding: 1rem 0;
   }
 
-  .menu-inner a {
-    text-align: center;
+  .granchela-menu-content a {
     padding: 0.9rem 1rem;
+    text-align: center;
   }
 }
