@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-language" content="es-CO">
   <title>Gran&Chela Club | Bar, Discoteca y Eventos en Chapinero Central, Bogotá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- SEO principal -->
   <meta name="description" content="Gran&Chela Club es un bar y discoteca en Chapinero Central, Bogotá. Disfruta música, DJs, cocteles, licores, promociones, fiestas temáticas y reserva espacios para cumpleaños, celebraciones y eventos privados.">
