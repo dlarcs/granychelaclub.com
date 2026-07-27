@@ -148,7 +148,7 @@
 </head>
 
 <body>
-  <?php include "home/nav/nav.php" ?>
+  <?php include "home/nav_gran/nav_gran.php" ?>
   <?php include "home/slider/slider.php" ?>
 
   <div class="container_gran_chela_club">
@@ -161,7 +161,7 @@
   <?php include "home/footer/footer.php" ?>
 
   <a class="whatsapp-fab"
-    href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20informacion"
+    href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20información"
     target="_blank" rel="noopener"
     aria-label="Chatear por WhatsApp">
     <img src="global/img/img_whatsApp.png"
