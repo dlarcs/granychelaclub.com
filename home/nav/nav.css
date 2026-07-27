@@ -48,22 +48,22 @@
 
   font-size: clamp(1.8rem, 2.8vw, 3rem);
   font-weight: 800;
+  font-style: normal;
   line-height: 1;
   letter-spacing: 0.02em;
   text-decoration: none;
 
   color: transparent;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff4b00 0%,
-      #ffb000 22%,
-      #e8f200 38%,
-      #00d084 54%,
-      #0099ff 74%,
-      #7657ff 100%
-    );
+  background: linear-gradient(
+    135deg,
+    #ff4b00 0%,
+    #ffb000 22%,
+    #e8f200 38%,
+    #00d084 54%,
+    #0099ff 74%,
+    #7657ff 100%
+  );
 
   background-size: 220% 220%;
   background-clip: text;
@@ -80,25 +80,22 @@
 
   color: inherit;
   font: inherit;
+  font-style: normal;
   line-height: inherit;
   letter-spacing: inherit;
 }
 
-/* Logo animation */
 @keyframes granchelaTitle {
   0% {
     background-position: 0% 50%;
-    transform: rotate(-1deg);
   }
 
   50% {
     background-position: 100% 50%;
-    transform: rotate(1deg);
   }
 
   100% {
     background-position: 0% 50%;
-    transform: rotate(-1deg);
   }
 }
 
