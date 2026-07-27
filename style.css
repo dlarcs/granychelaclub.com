@@ -35,46 +35,6 @@ body {
   margin: auto;
 }
 
-img,
-video,
-iframe,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-section,
-div,
-main {
-  max-width: 100%;
-  min-width: 0;
-}
-
-
-/* Scroll */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #000;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #000;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background-clip: padding-box;
-  box-shadow:
-    0 0 0 1px #fff,
-    inset 0 0 0 1px #000;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #111;
-}
 
 /* WhatsApp button */
 .whatsapp-fab {

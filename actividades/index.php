@@ -281,7 +281,7 @@
 
   <?php include "../global/pag_nav/pag_nav.php"; ?>
 
-  <main class="container_actividades">
+  <main class="container_actividad">
 
     <?php include "actividades/actividades.php"; ?>
 
