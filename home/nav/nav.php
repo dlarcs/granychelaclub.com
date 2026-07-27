@@ -1,14 +1,14 @@
 <?php
 $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
 
-$cssFile = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.css';
-$jsFile  = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.js';
+$cssFile = $base . '/home/nav/nav.css';
+$jsFile  = $base . '/home/nav/nav.css';
 
 $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
 ?>
 
-<link rel="stylesheet" href="../global/pag_nav/pag_nav.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
+<link rel="stylesheet" href="../home/nav/nav.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
 
 <header class="chapitour-header">
   <a href="../index.php" class="chapitour-logo" aria-label="Ir al inicio">
@@ -48,4 +48,4 @@ $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
     </div>
   </nav>
 </header>
-<script defer src="../global/pag_nav/pag_nav.js<?= $jsVer ? '?v=' . $jsVer : '' ?>"></script>
+<script defer src="../home/nav/nav.css<?= $jsVer ? '?v=' . $jsVer : '' ?>"></script>

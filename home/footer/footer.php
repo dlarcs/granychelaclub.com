@@ -1,6 +1,6 @@
 <?php
 $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
-$cssFile = $base . '/bar/Gran&Chela_Club/home/footer/footer.css';
+$cssFile = $base . '/home/footer/footer.css';
 $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 ?>
 <link rel="stylesheet" href="home/footer/footer.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">

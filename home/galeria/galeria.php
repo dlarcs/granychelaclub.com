@@ -1,8 +1,8 @@
 <?php
 $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
 
-$cssFile = $base . '/bar/Gran&Chela_Club/home/galeria/galeria.css';
-$jsFile  = $base . '/bar/Gran&Chela_Club/home/galeria/galeria.js';
+$cssFile = $base . '/home/galeria/galeria.css';
+$jsFile  = $base . '/home/galeria/galeria.js';
 
 $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';

@@ -39,9 +39,9 @@
   <meta name="twitter:image" content="https://granychelaclub.com/img/general18.jpg">
 
   <!-- Iconos -->
-  <link rel="icon" href="/bar/Gran&Chela_Club/img/general18.jpg">
-  <link rel="icon" type="image/jpeg" href="/bar/Gran&Chela_Club/img/general18.jpg">
-  <link rel="apple-touch-icon" href="/bar/Gran&Chela_Club/img/general18.jpg">
+  <link rel="icon" href="/img/general18.jpg">
+  <link rel="icon" type="image/jpeg" href="/img/general18.jpg">
+  <link rel="apple-touch-icon" href="/img/general18.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../galeria/style.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
