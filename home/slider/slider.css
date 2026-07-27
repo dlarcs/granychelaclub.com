@@ -1,8 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 .business-hero {
   position: relative;
@@ -11,6 +6,7 @@
   overflow: hidden;
   isolation: isolate;
   background: #050008;
+  font-family: 'Poppins', sans-serif;
 
 }
 .visible {
@@ -82,7 +78,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  
+
 }
 
 .business-hero__content h1 {
