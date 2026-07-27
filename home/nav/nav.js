@@ -1,55 +1,28 @@
-const granchelaMenuButton = document.querySelector(
-  ".granchela-menu-button"
-);
+const menuButton = document.querySelector(".menu-btn");
+const menu = document.querySelector("#chapitour-menu");
 
-const granchelaMenu = document.querySelector(
-  "#granchela-menu"
-);
+menuButton.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("is-open");
 
-function closeGranchelaMenu() {
-  granchelaMenu.classList.remove("granchela-menu-open");
-
-  granchelaMenuButton.classList.remove(
-    "granchela-button-active"
-  );
-
-  granchelaMenuButton.setAttribute(
-    "aria-expanded",
-    "false"
-  );
-}
-
-granchelaMenuButton.addEventListener("click", () => {
-  const isOpen = granchelaMenu.classList.toggle(
-    "granchela-menu-open"
-  );
-
-  granchelaMenuButton.classList.toggle(
-    "granchela-button-active",
-    isOpen
-  );
-
-  granchelaMenuButton.setAttribute(
-    "aria-expanded",
-    isOpen ? "true" : "false"
-  );
+  menuButton.classList.toggle("is-active", isOpen);
+  menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
 document.addEventListener("click", (event) => {
-  const clickedInsideMenu = granchelaMenu.contains(
-    event.target
-  );
+  const clickInsideMenu = menu.contains(event.target);
+  const clickInsideButton = menuButton.contains(event.target);
 
-  const clickedInsideButton =
-    granchelaMenuButton.contains(event.target);
-
-  if (!clickedInsideMenu && !clickedInsideButton) {
-    closeGranchelaMenu();
+  if (!clickInsideMenu && !clickInsideButton) {
+    menu.classList.remove("is-open");
+    menuButton.classList.remove("is-active");
+    menuButton.setAttribute("aria-expanded", "false");
   }
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    closeGranchelaMenu();
+    menu.classList.remove("is-open");
+    menuButton.classList.remove("is-active");
+    menuButton.setAttribute("aria-expanded", "false");
   }
 });

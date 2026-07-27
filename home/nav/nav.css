@@ -28,7 +28,6 @@
   box-sizing: border-box;
 
   backdrop-filter: blur(10px);
-  font-family: 'Poppins', sans-serif;
 }
 
 /* Logo */
@@ -54,7 +53,7 @@
   background-clip: text;
   -webkit-background-clip: text;
 
-
+  font-family: 'Poppins', sans-serif;
 
   animation: chapitourTitle 12s ease-in-out infinite;
 }
