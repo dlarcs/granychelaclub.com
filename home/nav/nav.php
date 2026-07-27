@@ -1,17 +1,14 @@
 <?php
 $base = rtrim($_SERVER['DOCUMENT_ROOT'], '/');
 
-$cssFile = $base . '/bar/Gran&Chela_Club/global/pag_nav/pag_nav.css';
-$jsFile  = $base . '/bar/Gran&Chela_Club/global/pag_nav/pag_nav.js';
+$cssFile = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.css';
+$jsFile  = $base . '/bar/CapitalQueer/global/pag_nav/pag_nav.js';
 
 $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
 $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
 ?>
 
-<link
-  rel="stylesheet"
-  href="global/pag_nav/pag_nav.css<?= $cssVer ? '?v=' . $cssVer : '' ?>"
->
+<link rel="stylesheet" href="global/pag_nav/pag_nav.css<?= $cssVer ? '?v=' . $cssVer : '' ?>">
 
 <header class="granchela-header">
 
