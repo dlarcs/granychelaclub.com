@@ -8,7 +8,7 @@ $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
   <div class="footer-inner">
 
     <div class="footer-brand">
-      <h1>Gran&Chela Club</h1>
+      <h2>Gran&Chela Club</h2>
       <p>Bar, club, discoteca y eventos</p>
 
       <div class="footer-social">
