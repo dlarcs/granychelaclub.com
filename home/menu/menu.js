@@ -22,42 +22,55 @@ if (featuredPlaces.length > 0) {
 }
 
 
-// Descripciones con "Ver más"
-const descripciones = document.querySelectorAll(".descripcion-card");
 
-descripciones.forEach((descripcion) => {
-  const textoCompleto = descripcion.textContent.trim();
-  const palabras = textoCompleto.split(" ");
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".menu-card-video");
 
-  if (palabras.length > 7) {
-    const textoCorto = palabras.slice(0, 7).join(" ");
-    let expandido = false;
+  videos.forEach((video) => {
+    // Intenta reproducir automáticamente
+    const playPromise = video.play();
 
-    descripcion.textContent = `${textoCorto}...`;
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        video.classList.add("video-paused");
+      });
+    }
 
-    const boton = document.createElement("span");
-    boton.textContent = " Ver más";
-    boton.classList.add("ver-mas");
-
-    descripcion.after(boton);
-
-    boton.addEventListener("click", () => {
-      if (expandido) {
-        descripcion.textContent = `${textoCorto}...`;
-        boton.textContent = " Ver más";
-        expandido = false;
+    // Click para reproducir o parar
+    video.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        video.classList.remove("video-paused");
       } else {
-        descripcion.textContent = textoCompleto;
-        boton.textContent = " Ver menos";
-        expandido = true;
+        video.pause();
+        video.classList.add("video-paused");
       }
     });
-  }
+  });
 });
-function toggleVideo(video) {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".menu-card-video");
+
+  videos.forEach((video) => {
+    // Intenta reproducir automáticamente
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        video.classList.add("video-paused");
+      });
+    }
+
+    // Click para reproducir o parar
+    video.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        video.classList.remove("video-paused");
+      } else {
+        video.pause();
+        video.classList.add("video-paused");
+      }
+    });
+  });
+});
