@@ -1,64 +1,82 @@
 /* ================================
-   CHAPITOUR MENU
+   GRAN & CHELA NAVIGATION
 ================================ */
 
 /* Header */
-.chapitour-header {
+.gc-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
   width: calc(100% - 2rem);
   height: 58px;
   margin: 1rem;
-  padding:  2rem 1rem;
-
-  background:
-   radial-gradient(circle at left center, rgba(0, 0, 0, 1), transparent 40%),
-   radial-gradient(circle at right center, rgba(0,0, 0, 1), transparent 15%);
-
-  color: #ebeaf0;
+  padding: 2rem 1rem;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  position: fixed;
-  top: 0;
-  left: 0;
+  color: #ebeaf0;
 
-  z-index: 1000;
+  background:
+    radial-gradient(
+      circle at left center,
+      rgba(0, 0, 0, 1),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at right center,
+      rgba(0, 0, 0, 1),
+      transparent 15%
+    );
+
   border-radius: 8px;
   box-sizing: border-box;
-
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Logo */
-.chapitour-logo {
-  font-size: clamp(1.8rem, 2.8vw, 3rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.02em;
+/* Logo link */
+.gc-logo {
+  display: inline-block;
+  text-decoration: none;
 
   color: transparent;
-  background:
-    linear-gradient(
-      135deg,
-      #ff4b00 0%,
-      #ffb000 22%,
-      #e8f200 38%,
-      #00d084 54%,
-      #0099ff 74%,
-      #7657ff 100%
-    );
+
+  background: linear-gradient(
+    135deg,
+    #ff4b00 0%,
+    #ffb000 22%,
+    #e8f200 38%,
+    #00d084 54%,
+    #0099ff 74%,
+    #7657ff 100%
+  );
 
   background-size: 220% 220%;
   background-clip: text;
   -webkit-background-clip: text;
 
-  font-family: 'Poppins', sans-serif;
-
-  animation: chapitourTitle 12s ease-in-out infinite;
+  animation: gcLogoAnimation 12s ease-in-out infinite;
 }
 
-@keyframes chapitourTitle {
+/* Logo title */
+.gc-logo h1 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0.02em;
+
+  color: transparent;
+}
+
+@keyframes gcLogoAnimation {
   0% {
     background-position: 0% 50%;
     transform: rotate(-1deg);
@@ -75,26 +93,29 @@
   }
 }
 
-/* Right buttons */
-.chapitour-actions {
+/* Right actions */
+.gc-actions {
   display: flex;
   align-items: center;
   gap: 0.7rem;
 }
 
-/* Icon buttons */
-.icon-btn {
+/* Circular button */
+.gc-btn {
   width: 42px;
   height: 42px;
-  border-radius: 999px;
-  border: 1px solid #000;
-
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  cursor: pointer;
+  padding: 0;
 
   display: grid;
   place-items: center;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  cursor: pointer;
 
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.02),
@@ -107,85 +128,112 @@
     box-shadow 0.25s ease;
 }
 
-.icon-btn:hover {
+.gc-btn:hover {
   transform: translateY(-2px);
+
   border-color: rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.08);
+
   box-shadow: 0 0 24px rgba(126, 65, 255, 0.35);
 }
 
-/* Search icon */
-.search-icon {
-  width: 17px;
-  height: 17px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  position: relative;
+.gc-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
-.search-icon::after {
+/* Search icon */
+.gc-search {
+  position: relative;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.gc-search::after {
   content: "";
-  width: 8px;
-  height: 2px;
-  background: #fff;
+
   position: absolute;
   right: -6px;
   bottom: -4px;
-  transform: rotate(45deg);
+
+  width: 8px;
+  height: 2px;
+
+  background: #ffffff;
   border-radius: 999px;
+
+  transform: rotate(45deg);
 }
 
-/* Burger icon */
-.menu-btn {
+/* Menu toggle */
+.gc-toggle {
   display: grid;
   gap: 4px;
 }
 
-.menu-btn span {
+/* Burger lines */
+.gc-toggle span {
+  display: block;
+
   width: 18px;
   height: 2px;
-  background: #fff;
-  display: block;
+
+  background: #ffffff;
+  border-radius: 999px;
 
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
 }
 
-/* Active burger */
-.menu-btn.is-active span:nth-child(1) {
+/* Active toggle */
+.gc-toggle.active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
 
-.menu-btn.is-active span:nth-child(2) {
+.gc-toggle.active span:nth-child(2) {
   opacity: 0;
 }
 
-.menu-btn.is-active span:nth-child(3) {
+.gc-toggle.active span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Dropdown menu */
-.chapitour-menu {
+.gc-menu {
   position: fixed;
   top: 82px;
   left: 1rem;
+  z-index: 999;
 
   width: calc(100% - 2rem);
 
   background:
-    radial-gradient(circle at top right, rgba(128, 54, 255, 0.22), transparent 35%),
-    linear-gradient(180deg, #080808, #020202);
+    radial-gradient(
+      circle at top right,
+      rgba(128, 54, 255, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #080808,
+      #020202
+    );
 
-  border-radius: 8px;
   border: 1px solid rgba(156, 88, 255, 0.25);
+  border-radius: 8px;
+
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
+  pointer-events: none;
 
-  z-index: 99;
+  transform: translateY(-10px);
 
   transition:
     opacity 0.25s ease,
@@ -193,33 +241,43 @@
     transform 0.25s ease;
 }
 
-.chapitour-menu.is-open {
+/* Open menu */
+.gc-menu.open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
+
   transform: translateY(0);
 }
 
-.menu-inner {
+/* Menu links container */
+.gc-links {
   width: min(1100px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 1.2rem 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(170px, 1fr)
+  );
   gap: 0.75rem;
 }
 
-.menu-inner a {
-  color: rgba(255, 255, 255, 0.88);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-
+/* Menu links */
+.gc-links a {
   padding: 0.85rem 1rem;
+
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
 
   transition:
     transform 0.25s ease,
@@ -228,52 +286,79 @@
     color 0.25s ease;
 }
 
-.menu-inner a:hover {
-  transform: translateY(-2px);
-  color: #fff;
+.gc-links a:hover {
+  color: #ffffff;
   background: rgba(126, 65, 255, 0.22);
+
   border-color: rgba(177, 121, 255, 0.45);
+
+  transform: translateY(-2px);
 }
 
-/* Responsive */
+.gc-links a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
 @media (max-width: 600px) {
-  .chapitour-header {
+  .gc-nav {
     width: calc(100% - 1rem);
     height: 58px;
     margin: 2rem 0.5rem;
+    padding: 2rem 1rem;
 
-    justify-content: space-between;
     gap: 1rem;
   }
 
-  .chapitour-logo {
+  .gc-logo h1 {
     font-size: clamp(1.7rem, 8vw, 2.4rem);
   }
 
-  .chapitour-actions {
+  .gc-actions {
     gap: 0.5rem;
   }
 
-  .icon-btn {
+  .gc-btn {
+    z-index: 100;
+
     width: 40px;
     height: 40px;
-    z-index: 100;
   }
 
-  .chapitour-menu {
-    top: 70px;
+  .gc-menu {
+    top: 98px;
     left: 0.5rem;
+
     width: calc(100% - 1rem);
   }
 
-  .menu-inner {
+  .gc-links {
     width: calc(100% - 1.4rem);
-    grid-template-columns: 1fr;
     padding: 1rem 0;
+
+    grid-template-columns: 1fr;
   }
 
-  .menu-inner a {
-    text-align: center;
+  .gc-links a {
     padding: 0.9rem 1rem;
+    text-align: center;
+  }
+}
+
+/* Reduce animations when requested */
+@media (prefers-reduced-motion: reduce) {
+  .gc-logo {
+    animation: none;
+  }
+
+  .gc-btn,
+  .gc-toggle span,
+  .gc-menu,
+  .gc-links a {
+    transition: none;
   }
 }

@@ -1,28 +1,71 @@
-const menuButton = document.querySelector(".menu-btn");
-const menu = document.querySelector("#chapitour-menu");
+"use strict";
 
-menuButton.addEventListener("click", () => {
-  const isOpen = menu.classList.toggle("is-open");
+const gcToggle = document.querySelector(".gc-toggle");
+const gcMenu = document.querySelector("#gc-menu");
 
-  menuButton.classList.toggle("is-active", isOpen);
-  menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
-});
-
-document.addEventListener("click", (event) => {
-  const clickInsideMenu = menu.contains(event.target);
-  const clickInsideButton = menuButton.contains(event.target);
-
-  if (!clickInsideMenu && !clickInsideButton) {
-    menu.classList.remove("is-open");
-    menuButton.classList.remove("is-active");
-    menuButton.setAttribute("aria-expanded", "false");
+/**
+ * Opens or closes the navigation menu.
+ *
+ * @param {boolean} open
+ */
+function setGcMenu(open) {
+  if (!gcToggle || !gcMenu) {
+    return;
   }
-});
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    menu.classList.remove("is-open");
-    menuButton.classList.remove("is-active");
-    menuButton.setAttribute("aria-expanded", "false");
-  }
-});
+  gcMenu.classList.toggle("open", open);
+  gcToggle.classList.toggle("active", open);
+
+  gcToggle.setAttribute(
+    "aria-expanded",
+    open ? "true" : "false"
+  );
+
+  gcToggle.setAttribute(
+    "aria-label",
+    open ? "Cerrar menú" : "Abrir menú"
+  );
+}
+
+/**
+ * Detects whether the menu is currently open.
+ *
+ * @returns {boolean}
+ */
+function isGcMenuOpen() {
+  return gcMenu?.classList.contains("open") ?? false;
+}
+
+if (gcToggle && gcMenu) {
+  gcToggle.addEventListener("click", () => {
+    setGcMenu(!isGcMenuOpen());
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+
+    if (!(clickedElement instanceof Node)) {
+      return;
+    }
+
+    const clickedMenu = gcMenu.contains(clickedElement);
+    const clickedToggle = gcToggle.contains(clickedElement);
+
+    if (!clickedMenu && !clickedToggle) {
+      setGcMenu(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isGcMenuOpen()) {
+      setGcMenu(false);
+      gcToggle.focus();
+    }
+  });
+
+  gcMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      setGcMenu(false);
+    });
+  });
+}
