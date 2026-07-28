@@ -43,11 +43,11 @@ $jsVer  = is_file($jsFile) ? filemtime($jsFile) : '';
   <img src="img/logo_lema.jpg" alt="Ambiente de bar y discoteca en Gran&Chela Club">
 
 </section>
-
 <a href="reservas/index.php">
   <div class="button_container">
     <button class="btn btn30" type="button" name="button">Reservas y eventos</button>
   </div>
 </a>
+
 
 <script defer src="home/acerca_nosotros/acerca_nosotros.js<?= $jsVer ? '?v=' . $jsVer : '' ?>"></script>

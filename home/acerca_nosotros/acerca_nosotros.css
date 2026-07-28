@@ -82,3 +82,23 @@
     margin-right: auto;
   }
 }
+
+/* Botón */
+.btn30 {
+  margin: 2rem auto;
+  background: transparent;
+  color: #fafafa;
+  border: 2px solid #ff62ea;
+  box-shadow: 0 0 10px #ff62ea;
+  animation: neon-border 1.5s infinite alternate;
+  padding: 10px 40px;
+  border-radius: 6px;
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn30:hover {
+  background: #ff62ea;
+  color: #000;
+}

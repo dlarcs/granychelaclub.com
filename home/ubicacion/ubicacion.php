@@ -17,7 +17,6 @@ $googleMapsLink = 'https://maps.app.goo.gl/ooTuqaX2yxjp4wMu6'; // Aquí cargas e
 
     <div class="business-location" id="ubicacion">
       <span class="section-label">Ubicación</span>
-s
       <h2>Encuéntranos en Chapinero</h2>
 
       <p>

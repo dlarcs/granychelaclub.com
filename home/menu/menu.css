@@ -19,6 +19,7 @@
 }
 
 .section-label {
+  margin: auto;
   display: inline-block;
   margin-bottom: 16px;
   font-size: 0.82rem;

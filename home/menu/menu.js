@@ -1,12 +1,19 @@
-// Animación al hacer scroll
-const featuredPlaces = document.querySelectorAll(".visible");
+// ========================================
+// SCROLL REVEAL ANIMATION
+// ========================================
+
+const featuredPlaces =
+  document.querySelectorAll(".visible");
 
 if (featuredPlaces.length > 0) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          entry.target.classList.add(
+            "is-visible"
+          );
+
           observer.unobserve(entry.target);
         }
       });
@@ -22,55 +29,59 @@ if (featuredPlaces.length > 0) {
 }
 
 
+// ========================================
+// VIDEO PLAY AND PAUSE
+// ========================================
 
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".menu-card-video");
+const videos =
+  document.querySelectorAll(
+    ".menu-card-video"
+  );
 
-  videos.forEach((video) => {
-    // Intenta reproducir automáticamente
-    const playPromise = video.play();
+videos.forEach((video) => {
+  // El video debe estar silenciado para
+  // permitir la reproducción automática.
+  video.muted = true;
 
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        video.classList.add("video-paused");
+  // Intenta reproducir el video.
+  const playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        video.classList.remove(
+          "video-paused"
+        );
+      })
+      .catch(() => {
+        video.classList.add(
+          "video-paused"
+        );
       });
+  }
+
+  // Reproduce o pausa al hacer clic.
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video
+        .play()
+        .then(() => {
+          video.classList.remove(
+            "video-paused"
+          );
+        })
+        .catch((error) => {
+          console.error(
+            "The video could not be played:",
+            error
+          );
+        });
+    } else {
+      video.pause();
+
+      video.classList.add(
+        "video-paused"
+      );
     }
-
-    // Click para reproducir o parar
-    video.addEventListener("click", () => {
-      if (video.paused) {
-        video.play();
-        video.classList.remove("video-paused");
-      } else {
-        video.pause();
-        video.classList.add("video-paused");
-      }
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".menu-card-video");
-
-  videos.forEach((video) => {
-    // Intenta reproducir automáticamente
-    const playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        video.classList.add("video-paused");
-      });
-    }
-
-    // Click para reproducir o parar
-    video.addEventListener("click", () => {
-      if (video.paused) {
-        video.play();
-        video.classList.remove("video-paused");
-      } else {
-        video.pause();
-        video.classList.add("video-paused");
-      }
-    });
   });
 });

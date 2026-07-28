@@ -12,9 +12,63 @@ $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
       <p>Bar, club, discoteca y eventos</p>
 
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="TikTok">♪</a>
+        <div class="social-links">
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/granychela.club/"
+    class="social-link"
+    aria-label="Instagram"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5"
+        ry="5"
+      ></rect>
+
+      <circle
+        cx="12"
+        cy="12"
+        r="4"
+      ></circle>
+
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        class="icon-dot"
+      ></circle>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a
+    href="https://www.facebook.com/profile.php?id=61591409664220"
+    class="social-link"
+    aria-label="Facebook"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        d="M14 8h3V4.5c-.6-.1-1.8-.2-3.2-.2-3.1 0-5.2 1.9-5.2 5.4V12H5v4h3.6v8h4.4v-8h3.5l.6-4H13V10c0-1.2.3-2 1-2z"
+      ></path>
+    </svg>
+  </a>
+
+</div>
       </div>
     </div>
 
@@ -37,7 +91,7 @@ $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
   </div>
 
   <div class="footer-bottom">
-    <small>© 2024 Chapitour.co</small>
+    <small>© 2025 Gran&Chela Club</small>
     <small>Todos los derechos reservados.</small>
   </div>
 </footer>
