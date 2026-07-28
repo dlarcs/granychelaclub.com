@@ -1,46 +1,34 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".visible");
+  const revealElements =
+    document.querySelectorAll(".gs-reveal");
 
-  if (sections.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+  if (revealElements.length === 0) {
+    return;
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll(".menu-card-video");
+  /*
+   * Shows the slider when it enters
+   * the visible area of the screen.
+   */
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-  videos.forEach((video) => {
-    // Intenta reproducir automáticamente
-    const playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        video.classList.add("video-paused");
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
       });
+    },
+    {
+      threshold: 0.3,
     }
+  );
 
-    // Click para reproducir o parar
-    video.addEventListener("click", () => {
-      if (video.paused) {
-        video.play();
-        video.classList.remove("video-paused");
-      } else {
-        video.pause();
-        video.classList.add("video-paused");
-      }
-    });
+  revealElements.forEach((element) => {
+    observer.observe(element);
   });
 });
