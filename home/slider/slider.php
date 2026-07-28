@@ -36,9 +36,9 @@ $jsVer = is_file($jsFile)
         Bar · Discoteca · Buena rumba
       </span>
 
-      <h1 class="gs-title">
+      <h2 class="gs-title">
         Gran&amp;Chela Club
-      </h1>
+      </h2>
 
       <p class="gs-text">
         Un lugar para disfrutar la noche con buena música,
