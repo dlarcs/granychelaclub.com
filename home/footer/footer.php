@@ -91,7 +91,7 @@ $cssVer = is_file($cssFile) ? filemtime($cssFile) : '';
   </div>
 
   <div class="footer-bottom">
-    <small>© 2025 Gran&Chela Club</small>
+    <small>© 2026 Gran&Chela Club</small>
     <small>Todos los derechos reservados.</small>
   </div>
 </footer>

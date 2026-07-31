@@ -291,21 +291,12 @@
 
   <?php include "../global/pag_footer/pag_footer.php"; ?>
 
-  <a
-    class="whatsapp-fab"
-    href="https://wa.me/573224680419?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20informaci%C3%B3n%20sobre%20sus%20actividades%2C%20promociones%20y%20eventos."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Consultar actividades, promociones y eventos por WhatsApp"
-  >
-
-    <img
-      src="../global/img/img_whatsApp.png"
-      alt="Contactar a Gran&Chela Club por WhatsApp"
-      loading="lazy"
-      decoding="async"
-    >
-
+  <a class="whatsapp-fab"
+    href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20información"
+    target="_blank" rel="noopener"
+    aria-label="Chatear por WhatsApp">
+    <img src="global/img/img_whatsApp.png"
+      alt="Contactar a Gran&Chela Club por WhatsApp" decoding="async">
   </a>
 
 </body>

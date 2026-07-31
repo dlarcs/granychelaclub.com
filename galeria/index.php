@@ -109,12 +109,12 @@
 
   <?php include "../global/pag_footer/pag_footer.php" ?>
   <a class="whatsapp-fab"
-		href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Bar%20Restaurant"
-		target="_blank" rel="noopener"
-		aria-label="Chatear por WhatsApp" >
-		<img src="../global/img/img_whatsApp.png"
-		 alt="Contactar por WhatsApp" decoding="async">
-	</a>
+    href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20información"
+    target="_blank" rel="noopener"
+    aria-label="Chatear por WhatsApp">
+    <img src="global/img/img_whatsApp.png"
+      alt="Contactar a Gran&Chela Club por WhatsApp" decoding="async">
+  </a>
 </body>
 
 </html>

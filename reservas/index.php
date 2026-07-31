@@ -223,11 +223,13 @@
 
 	<?php include "../global/pag_footer/pag_footer.php"; ?>
 
-	<a class="whatsapp-fab" href="https://wa.me/573224680419?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20hacer%20una%20reserva." target="_blank" rel="noopener noreferrer" aria-label="Reservar en Gran&Chela Club por WhatsApp">
-
-		<img src="../global/img/img_whatsApp.png" alt="Contactar a Gran&Chela Club para realizar una reserva" loading="lazy" decoding="async">
-
-	</a>
+	<a class="whatsapp-fab"
+    href="https://wa.me/573224680419?text=Hola%20vengo%20desde%20la%20web%20de%20Gran%26Chela%20Club%20y%20quiero%20mas%20información"
+    target="_blank" rel="noopener"
+    aria-label="Chatear por WhatsApp">
+    <img src="global/img/img_whatsApp.png"
+      alt="Contactar a Gran&Chela Club por WhatsApp" decoding="async">
+  </a>
 
 </body>
 
